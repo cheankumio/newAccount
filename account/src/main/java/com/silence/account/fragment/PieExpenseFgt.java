@@ -114,7 +114,7 @@ public class PieExpenseFgt extends BaseFragment implements DatePickerDialog.OnDa
         mExpenseStatisticses = mExpenseDao.getPeriodCatSumExpense(start, end, AccountApplication.sUser.getId());
         if (mExpenseStatisticses != null && mExpenseStatisticses.size() > 0) {
             List<SliceValue> sliceValueList = new ArrayList<>(mExpenseStatisticses.size());
-            mPieChartData.setCenterText1("总支出");
+            mPieChartData.setCenterText1("總支出");
             float sumExpense = mExpenseDao.getPeriodSumExpense(start, end, AccountApplication.sUser.getId());
             mPieChartData.setCenterText2(String.valueOf(sumExpense));
             for (int i = 0, j = mExpenseStatisticses.size(); i < j; i++) {
@@ -123,7 +123,7 @@ public class PieExpenseFgt extends BaseFragment implements DatePickerDialog.OnDa
             mPieChartData.setValues(sliceValueList);
         } else {
             mPieChartData.setValues(null);
-            mPieChartData.setCenterText1("还没有记录哦~~");
+            mPieChartData.setCenterText1("目前尚無記錄~~");
             mPieChartData.setCenterText2("");
         }
         mPieChart.setPieChartData(mPieChartData);
@@ -172,8 +172,8 @@ public class PieExpenseFgt extends BaseFragment implements DatePickerDialog.OnDa
             break;
             case R.id.label_expense_date_chart: {
                 DatePickerDialog dpd = DatePickerDialog.newInstance(this, mYear, mMonth, 1);
-                dpd.setStartTitle("开始日期");
-                dpd.setEndTitle("结束日期");
+                dpd.setStartTitle("開始日期");
+                dpd.setEndTitle("結束日期");
                 dpd.setAccentColor(getResources().getColor(R.color.colorPrimary));
                 dpd.show(getActivity().getFragmentManager(), "ExpenseDatePickerDialog");
             }

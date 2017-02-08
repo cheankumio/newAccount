@@ -60,7 +60,7 @@ public class GridInCatAdapter extends BaseAdapter {
         }
         final IncomeCat incomeCat = mIncomeCats.get(position);
         String name = incomeCat.getName();
-        if (!"添加".equals(name) && !"删除".equals(name)) {
+        if (!"新增".equals(name) && !"删除".equals(name)) {
             viewHolder.ivClose.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -72,7 +72,7 @@ public class GridInCatAdapter extends BaseAdapter {
                         setCloseVisibility(View.GONE);
                         mImgCloses.remove(mImgCloses.size() - 1);
                     } else {
-                        T.showShort(mContext, "删除失败");
+                        T.showShort(mContext, "删除失敗");
                         setCloseVisibility(View.GONE);
                     }
                 }

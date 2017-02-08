@@ -169,8 +169,8 @@ public class ExpenseFragment extends BaseFragment implements AdapterView.OnItemC
 
     private List<ExpenseCat> getCategory() {
         List<ExpenseCat> cats = mExpenseCatDao.getExpenseCat((AccountApplication.sUser.getId()));
-        cats.add(new ExpenseCat(R.mipmap.jiahao_bai, "添加", AccountApplication.sUser));
-        cats.add(new ExpenseCat(R.mipmap.jianhao_bai, "删除", AccountApplication.sUser));
+        cats.add(new ExpenseCat(R.mipmap.jiahao_bai, "新增", AccountApplication.sUser));
+        cats.add(new ExpenseCat(R.mipmap.jianhao_bai, "刪除", AccountApplication.sUser));
         return cats;
     }
 
@@ -268,7 +268,7 @@ public class ExpenseFragment extends BaseFragment implements AdapterView.OnItemC
     private void saveExpense() {
         String trim = mEtExpense.getText().toString().trim();
         if (TextUtils.isEmpty(trim)) {
-            Toast.makeText(mContext, "请输入金额", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "請輸入金額", Toast.LENGTH_SHORT).show();
             return;
         }
         float amount = Float.parseFloat(trim);
@@ -282,7 +282,7 @@ public class ExpenseFragment extends BaseFragment implements AdapterView.OnItemC
                 EventBus.getDefault().post("expense_updated");
                 getActivity().finish();
             } else {
-                T.showShort(mContext, "修改失败");
+                T.showShort(mContext, "修改失敗");
             }
         } else {
             if (expenseDao.addExpense(mExpense)) {
@@ -290,7 +290,7 @@ public class ExpenseFragment extends BaseFragment implements AdapterView.OnItemC
                 EventBus.getDefault().post("expense_inserted");
                 getActivity().finish();
             } else {
-                T.showShort(mContext, "保存失败");
+                T.showShort(mContext, "保存失敗");
             }
         }
     }

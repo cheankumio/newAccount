@@ -61,30 +61,30 @@ public class PasswordActivity extends BaseActivity {
                                             @Override
                                             public void onSuccess() {
                                                 new UserDao(PasswordActivity.this).updatePass(newPass, AccountApplication.sUser.getId());
-                                                T.showShort(getApplicationContext(), "密码修改成功");
+                                                T.showShort(getApplicationContext(), "密碼修改成功");
                                                 finish();
                                             }
 
                                             @Override
                                             public void onFailure(int code, String msg) {
-                                                T.showShort(getApplicationContext(), "密码修改失败");
+                                                T.showShort(getApplicationContext(), "密碼修改失敗");
                                             }
                                         });
                             } else {
-                                T.showShort(getApplicationContext(), "旧密码错误");
+                                T.showShort(getApplicationContext(), "舊密碼錯誤");
                             }
                         }
 
                         @Override
                         public void onError(int code, String msg) {
-                            T.showShort(getApplicationContext(), "请检查网络连接");
+                            T.showShort(getApplicationContext(), "請連接網路");
                         }
                     });
                     return null;
                 }
             }.execute();
         } else {
-            T.showShort(this, "请输入完整密码");
+            T.showShort(this, "請輸入完整密碼");
         }
     }
 }

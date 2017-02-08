@@ -68,8 +68,8 @@ public class ExpenseCatDao {
                 R.mipmap.richangyongpin, R.mipmap.icon_zhichu_type_shoujitongxun, R.mipmap.huazhuangpin,
                 R.mipmap.fangzu, R.mipmap.dianying, R.mipmap.icon_zhichu_type_taobao, R.mipmap.huankuan,
                 R.mipmap.icon_shouru_type_hongbao, R.mipmap.yaopinfei};
-        String labels[] = {"一般", "餐饮", "交通", "酒水饮料", "水果", "零食", "买菜", "衣服鞋包", "生活用品",
-                "话费", "护肤彩妆", "房租", "电影", "淘宝", "还钱", "红包", "药品"};
+        String labels[] = {"一般", "餐飲", "交通", "酒水飲料", "水果", "零食", "買菜", "衣服鞋包", "生活用品",
+                "電話費", "護膚彩妝", "房租", "電影", "網購", "還錢", "紅包", "藥品"};
         List<ExpenseCat> cats = new ArrayList<>(resId.length);
         ExpenseCat expenseCat;
         for (int i = 0; i < resId.length; i++) {

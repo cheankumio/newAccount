@@ -94,8 +94,8 @@ public class MineFragment extends BaseFragment {
                     intent, PendingIntent.FLAG_UPDATE_CURRENT);
             AlarmManager am = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
             am.set(AlarmManager.RTC_WAKEUP, date.getTime(), pendingIntent);
-            Toast.makeText(mContext, "闹钟将在" + DateUtils.date2Str(date, "MM-dd HH:mm")
-                    + "发出提醒", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "鬧鐘將在" + DateUtils.date2Str(date, "MM-dd HH:mm")
+                    + "發出提醒", Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -125,8 +125,8 @@ public class MineFragment extends BaseFragment {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 builder.setTitle("警告");
                 builder.setCancelable(true);
-                builder.setMessage(" 初始化将删除所有的软件记录并恢复软件的最初设置，你确定这么做吗？");
-                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                builder.setMessage("初始化將刪除您所有記帳資料，您確定要初始化嗎？");
+                builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //在这里初始化所有数据表，并退出登录
@@ -143,15 +143,15 @@ public class MineFragment extends BaseFragment {
             break;
             case R.id.ll_me_check: {
                 final ProgressDialog dialog = new ProgressDialog(mContext);
-                dialog.setTitle("正在检查新版本");
-                dialog.setMessage("请稍后...");
+                dialog.setTitle("正在檢查新版本");
+                dialog.setMessage("請稍候...");
                 dialog.setCancelable(false);
                 dialog.setIndeterminate(true);
                 dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialog) {
-                        T.showShort(mContext, "已是最新版本，无需更新！");
+                        T.showShort(mContext, "已是最新版本，無需更新！");
                     }
                 });
                 dialog.show();

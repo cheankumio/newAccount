@@ -123,7 +123,7 @@ public class ShowIncomeFgt extends ListFragment {
                     invalidateUI();
                     EventBus.getDefault().post("income_deleted");
                 } else {
-                    T.showShort(getActivity(), "删除失败");
+                    T.showShort(getActivity(), "删除失敗");
                 }
                 return false;
             }

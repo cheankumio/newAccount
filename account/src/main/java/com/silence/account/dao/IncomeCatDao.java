@@ -69,7 +69,7 @@ public class IncomeCatDao {
     public IncomeCat findInvest() {
         List<IncomeCat> cats = null;
         try {
-            cats = mDao.queryForEq("ASname", "投资收益");
+            cats = mDao.queryForEq("ASname", "投資收益");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -83,8 +83,8 @@ public class IncomeCatDao {
                 R.mipmap.icon_shouru_type_jieru, R.mipmap.icon_shouru_type_jiangjin, R.mipmap.huankuan,
                 R.mipmap.baoxiao, R.mipmap.xianjin, R.mipmap.tuikuan, R.mipmap.zhifubao,
                 R.mipmap.icon_shouru_type_qita};
-        String labels[] = {"工资", "生活费", "红包", "零花钱", "兼职", "投资收益", "借入",
-                "奖金", "还款", "报销", "现金", "退款", "支付宝", "其他"};
+        String labels[] = {"薪水", "生活費", "紅包", "零用錢", "兼職", "投資收益", "借入",
+                "獎金", "還款", "報銷", "現金", "退款", "網拍", "其他"};
         List<IncomeCat> cats = new ArrayList<>(resId.length);
         IncomeCat incomeCat;
         for (int i = 0; i < resId.length; i++) {

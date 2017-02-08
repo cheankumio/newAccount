@@ -60,7 +60,7 @@ public class GridExpCatAdapter extends BaseAdapter {
         }
         final ExpenseCat expenseCat = mExpenseCatList.get(position);
         String name = expenseCat.getName();
-        if (!"添加".equals(name) && !"删除".equals(name)) {
+        if (!"新增".equals(name) && !"删除".equals(name)) {
             viewHolder.ivClose.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -72,7 +72,7 @@ public class GridExpCatAdapter extends BaseAdapter {
                         setCloseVisibility(View.GONE);
                         mImgCloses.remove(mImgCloses.size() - 1);
                     } else {
-                        T.showShort(mContext, "删除失败");
+                        T.showShort(mContext, "刪除失敗");
                         setCloseVisibility(View.GONE);
                     }
                 }

@@ -130,7 +130,7 @@ public class PieIncomeFgt extends BaseFragment implements
         } else {
             mPieChartData.setValues(null);
             mPieChartData.setCenterText2("");
-            mPieChartData.setCenterText1("还没有记录哦~~");
+            mPieChartData.setCenterText1("目前尚無記錄~~");
         }
         mPieChart.setPieChartData(mPieChartData);
         prepareDataAnimation();
@@ -170,7 +170,7 @@ public class PieIncomeFgt extends BaseFragment implements
             break;
             case R.id.label_expense_date_chart: {
                 DatePickerDialog dpd = DatePickerDialog.newInstance(this, mYear, mMonth, 1);
-                dpd.setStartTitle("开始日期");
+                dpd.setStartTitle("開始日期");
                 dpd.setEndTitle("结束日期");
                 dpd.setAccentColor(getResources().getColor(R.color.colorPrimary));
                 dpd.show(getActivity().getFragmentManager(), "DatePickerDialog");

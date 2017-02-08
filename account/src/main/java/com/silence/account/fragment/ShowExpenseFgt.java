@@ -116,7 +116,7 @@ public class ShowExpenseFgt extends ListFragment {
                     EventBus.getDefault().post("expense_deleted");
                     invalidateUI();
                 } else {
-                    T.showShort(getActivity(), "删除失败");
+                    T.showShort(getActivity(), "删除失敗");
                 }
                 return false;
             }

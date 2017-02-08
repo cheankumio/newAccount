@@ -172,7 +172,7 @@ public class IncomeFragment extends BaseFragment implements AdapterView.OnItemCl
 
     private List<IncomeCat> getCategory() {
         List<IncomeCat> cats = mIncomeCatDao.getIncomeCat(AccountApplication.sUser.getId());
-        cats.add(new IncomeCat(R.mipmap.jiahao_bai, "添加", AccountApplication.sUser));
+        cats.add(new IncomeCat(R.mipmap.jiahao_bai, "新增", AccountApplication.sUser));
         cats.add(new IncomeCat(R.mipmap.jianhao_bai, "删除", AccountApplication.sUser));
         return cats;
     }
@@ -265,7 +265,7 @@ public class IncomeFragment extends BaseFragment implements AdapterView.OnItemCl
     private void saveIncome() {
         String trim = mEtIncome.getText().toString().trim();
         if (TextUtils.isEmpty(trim)) {
-            Toast.makeText(mContext, "请输入金额", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "請輸入金額", Toast.LENGTH_SHORT).show();
             return;
         }
         float amount = Float.parseFloat(trim);
@@ -279,7 +279,7 @@ public class IncomeFragment extends BaseFragment implements AdapterView.OnItemCl
                 EventBus.getDefault().post("income_inserted");
                 getActivity().finish();
             } else {
-                T.showShort(mContext, "保存失败");
+                T.showShort(mContext, "保存失敗");
             }
         } else {
             if (incomeDao.updateIncome(mIncome)) {
@@ -287,7 +287,7 @@ public class IncomeFragment extends BaseFragment implements AdapterView.OnItemCl
                 EventBus.getDefault().post("income_updated");
                 getActivity().finish();
             } else {
-                T.showShort(mContext, "修改失败");
+                T.showShort(mContext, "修改失敗");
             }
         }
     }

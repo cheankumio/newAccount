@@ -65,7 +65,7 @@ public class UserActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.ll_info_photo: {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setItems(new String[]{"拍照", "图库"}, new DialogInterface.OnClickListener() {
+                builder.setItems(new String[]{"拍照", "圖庫"}, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
@@ -182,7 +182,7 @@ public class UserActivity extends BaseActivity {
 
                                         @Override
                                         public void onError(int statuscode, String errormsg) {
-                                            L.i("文件上传失败：" + errormsg);
+                                            L.i("文件上傳失敗：" + errormsg);
                                         }
                                     });
                             return null;
