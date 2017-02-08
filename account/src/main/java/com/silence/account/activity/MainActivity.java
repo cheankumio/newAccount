@@ -33,7 +33,7 @@ import com.silence.account.utils.Constant;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.bmob.v3.BmobUser;
-import cn.sharesdk.framework.ShareSDK;
+
 
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
     @Bind(R.id.radio_gp_tab)
@@ -53,7 +53,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        ShareSDK.initSDK(this);
         mRadioGpTab.setOnCheckedChangeListener(this);
         AccountApplication.sUser = new UserDao(this).getCurrentUser(BmobUser.getCurrentUser(getApplicationContext()).getUsername());
         mFragmentManager = getSupportFragmentManager();
@@ -211,7 +210,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(mBroadcastReceiver);
-        ShareSDK.stopSDK(this);
     }
 
 }

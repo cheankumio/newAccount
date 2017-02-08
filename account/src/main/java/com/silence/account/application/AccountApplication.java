@@ -25,7 +25,7 @@ public class AccountApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Bmob.initialize(getApplicationContext(), "7930be502d4400a41d4f656fbd9c65cf");
+        Bmob.initialize(getApplicationContext(), "b2e28d05deabab31c4e1bfdd24f2de6f");
         sAccountApplication = this;
 //        refWatcher = LeakCanary.install(this);
 

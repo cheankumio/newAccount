@@ -3,6 +3,7 @@ package com.silence.account.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 
 import com.silence.account.R;
@@ -85,6 +86,7 @@ public class RegisterActivity extends BaseActivity {
 
                             @Override
                             public void onError(int i, String s) {
+                                Log.d("MYLOG","int: "+i+" "+s);
                                 T.showShort(getApplicationContext(), getString(R.string.verify_fail));
                             }
                         });

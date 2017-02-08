@@ -43,7 +43,6 @@ import java.util.TimerTask;
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
-import cn.sharesdk.onekeyshare.OnekeyShare;
 
 /**
  * Created by Silence on 2016/3/7 0007.
@@ -164,19 +163,6 @@ public class MineFragment extends BaseFragment {
                 };
                 Timer timer = new Timer();
                 timer.schedule(task, Constant.DELAY_TIME);
-            }
-            break;
-            case R.id.ll_me_share: {
-                OnekeyShare oks = new OnekeyShare();
-                oks.disableSSOWhenAuthorize();
-                oks.setTitle("分享一款好用的记账软件");
-                oks.setTitleUrl("http://weibo.com/SilenceLiu93");
-                oks.setText("亲们，给大家推荐一款记账软件，好漂亮的界面，记账好简单，超赞的！");
-                oks.setImageUrl("http://d.picphotos.baidu.com/album/s%3D740%3Bq%3D90/sign=22e18184902bd40746c7d1f94bb2ef6c/37d3d539b6003af31142c3cc322ac65c1138b6a5.jpg");
-                oks.setSite(getString(R.string.app_name));
-                oks.setSiteUrl("http://weibo.com/SilenceLiu93");
-                oks.setUrl("http://weibo.com/SilenceLiu93");
-                oks.show(mContext);
             }
             break;
             case R.id.ll_me_about: {
