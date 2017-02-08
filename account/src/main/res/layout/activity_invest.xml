@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:paddingLeft="8dp"
-        android:text="投资金额(元)"
+        android:text="投資金額(元)"
         android:textSize="16sp"
         />
 
@@ -39,7 +39,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:layout_gravity="center_vertical"
-            android:text="投资类型"
+            android:text="投資類型"
             android:textSize="16sp"
             />
 
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:paddingLeft="8dp"
-        android:text="投资期限(年)"
+        android:text="投資期限(年)"
         android:textSize="16sp"
         />
 

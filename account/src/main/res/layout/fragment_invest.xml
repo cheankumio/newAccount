@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="本月结余"
+                android:text="本月結餘"
                 android:textColor="@color/actionbar_text_default"
                 android:textSize="14sp"/>
 
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="本月投资"
+                android:text="本月投資"
                 android:textColor="@color/actionbar_text_default"
                 android:textSize="14sp"/>
 
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="本月闲置"
+                android:text="本月閒置"
                 android:textColor="@color/actionbar_text_default"
                 android:textSize="14sp"/>
 
@@ -112,7 +112,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_btn_login"
-        android:text="记录投资"
+        android:text="記錄投資"
         android:textColor="@color/white"
         android:textSize="16sp"/>
 
@@ -126,12 +126,12 @@
 
         <TextView
             style="@style/text_line_chart_list_header"
-            android:text="类型"
+            android:text="類型"
             />
 
         <TextView
             style="@style/text_line_chart_list_header"
-            android:text="金额"
+            android:text="金額"
             />
 
         <TextView

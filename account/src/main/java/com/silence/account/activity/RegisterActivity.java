@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.silence.account.R;
 import com.silence.account.model.User;
@@ -28,12 +31,16 @@ public class RegisterActivity extends BaseActivity {
     EditText mRegEmail;
     @Bind(R.id.et_reg_pass)
     EditText mRegPass;
-
+    @Bind(R.id.btn_register)
+    Button register;
+    @Bind(R.id.progressBar)
+    ProgressBar registerBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         setTitle(R.string.text_register);
+        register.setEnabled(true);
         showBackwardView(true);
     }
 
@@ -45,6 +52,8 @@ public class RegisterActivity extends BaseActivity {
     @OnClick(R.id.btn_register)
     //注册按钮，执行的操作
     public void registerClick() {
+        register.setEnabled(false);
+        registerBar.setVisibility(View.VISIBLE);
         //获取输入框中用户输入的信息
         final String name = mRegUsername.getText().toString().trim();
         final String pass = mRegPass.getText().toString().trim();
@@ -82,12 +91,15 @@ public class RegisterActivity extends BaseActivity {
                                         }
                                     });
                                 }
+                                registerBar.setVisibility(View.INVISIBLE);
+                                enableall();
                             }
 
                             @Override
                             public void onError(int i, String s) {
                                 Log.d("MYLOG","int: "+i+" "+s);
                                 T.showShort(getApplicationContext(), getString(R.string.verify_fail));
+                                enableall();
                             }
                         });
                     }
@@ -95,9 +107,15 @@ public class RegisterActivity extends BaseActivity {
 
             } else {
                 T.showShort(this, getString(R.string.input_right_email));
+                enableall();
             }
         } else {
             T.showShort(this, getString(R.string.input_full_info));
+            enableall();
         }
+    }
+    private void enableall(){
+        register.setEnabled(true);
+        registerBar.setVisibility(View.INVISIBLE);
     }
 }

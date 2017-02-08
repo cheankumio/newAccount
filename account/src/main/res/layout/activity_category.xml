@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:background="@drawable/bg_edit_text"
             android:gravity="center_vertical"
-            android:hint="自定义输入名称"
+            android:hint="自訂類別名稱"
             android:imeOptions="actionNext"
             android:inputType="text"
             android:paddingLeft="8dp"

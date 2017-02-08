@@ -9,7 +9,7 @@
         android:id="@+id/forget_email"
         style="@style/et_normal_style"
         android:layout_alignParentTop="true"
-        android:hint="输入您要找回密码的邮箱"
+        android:hint="請輸入信箱"
         android:inputType="textEmailAddress"
         />
 

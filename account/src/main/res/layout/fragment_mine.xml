@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/me_username"
             style="@style/me_text_style"
-            android:text="用户名"
+            android:text="帳號"
             />
 
         <ImageView
@@ -44,7 +44,7 @@
 
         <TextView
             style="@style/me_text_style"
-            android:text="记账提醒"/>
+            android:text="記帳提醒"/>
 
         <ImageView
             style="@style/image_more"
@@ -84,7 +84,7 @@
 
         <TextView
             style="@style/me_text_style"
-            android:text="检查更新"/>
+            android:text="檢查更新"/>
 
     </LinearLayout>
 
@@ -100,7 +100,7 @@
 
         <TextView
             style="@style/me_text_style"
-            android:text="关于"/>
+            android:text="關於"/>
 
         <ImageView
             style="@style/image_more"

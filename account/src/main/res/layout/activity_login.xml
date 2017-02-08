@@ -22,7 +22,7 @@
         android:id="@+id/et_login_username"
         style="@style/et_normal_style"
         android:layout_below="@id/logo_login"
-        android:hint="用户名"
+        android:hint="帳號"
         >
 
         <requestFocus/>
@@ -32,13 +32,13 @@
         android:id="@+id/et_login_pass"
         style="@style/et_password_style"
         android:layout_below="@id/et_login_username"
-        />
+        android:hint="密碼" />
 
     <Button
         android:id="@+id/btn_login"
         style="@style/btn_normal_style"
         android:layout_below="@id/et_login_pass"
-        android:text="登录"
+        android:text="開始記帳"
         />
 
     <LinearLayout
@@ -55,7 +55,7 @@
             android:layout_weight="1"
             android:gravity="left"
             android:paddingLeft="10dp"
-            android:text="找回密码"
+            android:text="忘記密碼"
             />
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:paddingRight="10dp"
-            android:text="邮箱注册"
+            android:text="註冊帳號"
             />
 
     </LinearLayout>

@@ -15,7 +15,7 @@
 
         <TextView
             style="@style/info_text"
-            android:text="头像"
+            android:text="頭像"
             />
 
         <com.silence.account.view.CircleImageView
@@ -47,7 +47,7 @@
 
         <TextView
             style="@style/info_text"
-            android:text="昵称"
+            android:text="暱稱"
             />
 
         <TextView
@@ -80,7 +80,7 @@
 
         <TextView
             style="@style/info_text"
-            android:text="修改密码"
+            android:text="修改密碼"
             />
 
         <ImageView
@@ -103,7 +103,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/bg_text_btn"
         android:gravity="center"
-        android:text="退出登录"
+        android:text="登出使用者"
         android:textColor="@android:color/holo_red_light"
         android:textSize="18sp"
         />

@@ -31,7 +31,7 @@
             android:id="@+id/top_title"
             style="@style/TopView.Title"
             android:layout_weight="1"
-            android:text="欢迎"
+            android:text="歡迎使用小倆口帳本"
             />
 
         <ImageButton

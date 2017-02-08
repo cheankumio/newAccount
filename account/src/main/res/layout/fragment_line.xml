@@ -89,7 +89,7 @@
                     android:layout_weight="1"
                     android:background="#99CC00"
                     android:gravity="center"
-                    android:text="结余"
+                    android:text="結餘"
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     />
