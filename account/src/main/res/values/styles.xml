@@ -192,4 +192,9 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/actionbar_text_default</item>
     </style>
+
+    <style name="MY_NEW_THEME" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bk</item>
+    </style>
+
 </resources>

@@ -6,7 +6,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.bmob.BmobPro;
 import com.bmob.BmobProFile;
@@ -35,17 +37,25 @@ public class LoginActivity extends BaseActivity {
     EditText mEtLoginName;
     @Bind(R.id.et_login_pass)
     EditText mEtLoginPass;
-
+    @Bind(R.id.progressBar2)
+    ProgressBar progress2;
+    @Bind(R.id.btn_login)
+    Button login;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        progress2.setVisibility(View.INVISIBLE);
+        login.setEnabled(true);
     }
 
     @OnClick({R.id.btn_login, R.id.label_register, R.id.label_forget})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_login: {
+            case R.id.btn_login:
+                login.setEnabled(false);
+                progress2.setVisibility(View.VISIBLE);
+            {
                 if (!NetUtils.isConnected(this)) {
                     T.showShort(this, getString(R.string.check_net_connect));
                     return;
@@ -112,6 +122,8 @@ public class LoginActivity extends BaseActivity {
                     T.showShort(this, getString(R.string.input_user));
                 }
             }
+            progress2.setVisibility(View.VISIBLE);
+            login.setEnabled(true);
             break;
             case R.id.label_register:
                 startActivity(new Intent(this, RegisterActivity.class));
